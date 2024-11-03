@@ -1,0 +1,13 @@
+.Form {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 50px 0;
+    flex-direction: column;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    padding-left: 50px;
+}
