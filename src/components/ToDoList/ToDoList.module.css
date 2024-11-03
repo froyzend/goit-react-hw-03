@@ -1,0 +1,39 @@
+.ToDoList {
+    padding: 80px 40px 40px 40px;
+    border: 2px solid black;
+}
+
+.TaskInput {
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: rgb(52, 49, 49);
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: #acacac;
+}
+
+.AddTaskBtn {
+    border-radius: 15px;
+    padding: 10px 20px;
+    background-color: #3e327e;
+    border: none;
+    margin-left: 20px;
+}
+
+
+.TasksList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Task {
+    background-color: #acacac;
+    border-radius: 15px;
+    width: 50%;
+    padding: 8px 8px;
+    display: flex;
+    color: rgb(52, 49, 49);
+}

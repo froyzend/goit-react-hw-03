@@ -1,0 +1,10 @@
+.Notification {
+    background-color: lightblue;
+    color: rgb(9, 8, 8);
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
