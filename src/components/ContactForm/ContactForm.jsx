@@ -8,10 +8,12 @@ const schema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Name must be at least 3 characters")
     .max(50, "Name must be at most 50 characters")
+    .matches(/^[a-zA-Z\s]*$/, "Name must contain only letters and spaces")
     .required("Required"),
   number: Yup.string()
     .min(3, "Number must be at least 3 characters")
     .max(50, "Number must be at most 50 characters")
+    .matches(/^[0-9+\s]*$/, "Number must contain only numbers and spaces")
     .required("Required"),
 });
 
@@ -40,13 +42,13 @@ const ContactForm = ({ onSubmit }) => {
       validationSchema={schema}
     >
       <Form className={css.Form}>
-        <div>
+        <div className={css.field}>
           <label htmlFor={nameFieldId}>Name</label>
           <Field type="text" name="name" placeholder="Name" id={nameFieldId} />
-          <ErrorMessage className="error" name="name" component="span" />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
 
-        <div>
+        <div className={css.field}>
           <label htmlFor={numberFieldId}>Number</label>
           <Field
             type="text"
@@ -54,9 +56,11 @@ const ContactForm = ({ onSubmit }) => {
             placeholder="Number"
             id={numberFieldId}
           />
-          <ErrorMessage className="error" name="number" component="span" />
+          <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-        <button type="submit">Add</button>
+        <button className={css.button} type="submit">
+          Add
+        </button>
       </Form>
     </Formik>
   );

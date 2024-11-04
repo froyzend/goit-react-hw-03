@@ -2,12 +2,25 @@
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    padding: 50px 0;
+    padding: 50px 20px;
     flex-direction: column;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .error {
     color: red;
     font-size: 16px;
-    padding-left: 50px;
 }
