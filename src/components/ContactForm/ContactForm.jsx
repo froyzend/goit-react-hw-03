@@ -8,12 +8,10 @@ const schema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Name must be at least 3 characters")
     .max(50, "Name must be at most 50 characters")
-    .matches(/^[a-zA-Z\s]*$/, "Name must contain only letters and spaces")
     .required("Required"),
   number: Yup.string()
     .min(3, "Number must be at least 3 characters")
     .max(50, "Number must be at most 50 characters")
-    .matches(/^[0-9+\s]*$/, "Number must contain only numbers and spaces")
     .required("Required"),
 });
 
